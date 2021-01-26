@@ -1,0 +1,225 @@
+@import 'src/_keyframes.scss';
+
+$mainColor: #22272B;
+$additionalColor: #0077d26e;
+$fontColor: #fafafa;
+$darkFormColor: rgba(90, 90, 90, 0.527);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: $mainColor;
+    background: linear-gradient(-30deg, #1389c088 0%, #203d5ae5 50%, #262626 50%, #838688 100%);
+}
+
+header {
+    text-align: center;
+    box-shadow: 5px 9px 20px 8px rgb(15, 15, 15);
+    overflow: hidden;
+    cursor: default;
+
+    h1 {
+        padding: 30px 10px;
+        color: $fontColor;
+    }
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form {
+    margin: 150px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px 50px;
+    border: 5px solid $darkFormColor;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.137);
+    font-size: 1.2em;
+    color: $fontColor;
+
+    &__title {
+        padding: 0 0 20px;
+    }
+
+    &__input {
+        position: relative;
+        padding: 10px 0;
+
+        input {
+            padding: 8px 10px;
+            padding-left: 50px;
+            border: 1px solid $fontColor;
+            border-radius: 25px;
+            background-color: $darkFormColor;
+            font-size: 1em;
+            outline: none;
+            color: $fontColor;
+
+            &:focus {
+                border-color: black;
+            }
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__button {
+        position: relative;
+        margin: 20px 0;
+        padding: 5px 30px;
+        border-radius: 25px;
+        border: 1px solid $fontColor;
+        background-color: $darkFormColor;
+        font-size: 1.1em;
+        color: $fontColor;
+        cursor: pointer;
+        outline: none;
+        transition: .3s;
+        overflow: hidden;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            background: #1A638D;
+            opacity: .6;
+            z-index: -1;
+            transition: .15s;
+        }
+
+        &:hover::before {
+            top: 0;
+        }
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        div {
+            text-align: left;
+            width: 100%;
+            font-size: .9em;
+
+            input {
+                border: 0px;
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    &__resultsList {
+        .resultsTitle {
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .resultsContainer {
+            margin: 0 auto;
+            text-align: center;
+            width: 400px;
+
+            p {
+                font-size: .85em;
+                padding: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+
+    .form {
+
+        &__resultsList {
+            .resultsContainer {
+                width: 300px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+
+    header {
+        h1 {
+            font-size: 1.7em;
+        }
+    }
+
+    .form {
+        margin: 75px 0 30px;
+
+        &__resultsList {
+            .resultsContainer {
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        h1 {
+            font-size: 1.5em;
+        }
+    }
+
+    .form {
+        margin: 50px 0 30px;
+
+        &__resultsList {
+            .resultsContainer {
+                width: 150px;
+            }
+        }
+    }
+}

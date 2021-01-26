@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Witaj w aplikacji, która lekko pomaga przy nauce...</h1>
+        </header>
+        <main>
+            <section class="section-login">
+                <div class="form">
+                    <h2 class="form__title">Login</h2>
+                    <div class="form__user form__input">
+                        <input type="text" placeholder="Nazwa użytkownika">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form__password form__input">
+                        <input type="password" placeholder="Hasło">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <button class="form__button">Zaloguj</button>
+                </div>
+
+            </section>
+            <section class="section-app" style="display: none;">
+                <div class="form">
+                    <h2 class="form__title">Wyszukaj słówka</h2>
+                    <div class="form__options form__input">
+                        <div>
+                            <input type="radio" id="fromEng" name="translateFrom" value="Z angielskiego" checked>
+                            <label for="Z angielskiego">Przetłumacz z angielskiego</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="fromPl" name="translateFrom" value="Z polskiego">
+                            <label for="Z polskiego">Przetłumacz z polskiego</label>
+                        </div>
+                    </div>
+                    <div class="form__word form__input">
+                        <input type="text" placeholder="Wpisz słówko">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="form__resultsList">
+                        <h3 class="resultsTitle">Lista wyników:</h3>
+                        <div class="resultsContainer"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/afd9c31c73.js" crossorigin="anonymous"></script>
+    <script src="src/vanilla-tilt.min.js"></script>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
