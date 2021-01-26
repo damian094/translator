@@ -5,7 +5,7 @@ import words from './src/words.js';
 
 class Serivce {
     constructor() {
-        const dom = new DOM('jarek','pisior');
+        const dom = new DOM('jarek','jpis');
         dom.render();
         const app = new App(words);
     }

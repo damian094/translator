@@ -161,6 +161,7 @@ main {
   -webkit-transition: .3s;
   transition: .3s;
   overflow: hidden;
+  font-size: 1.3em;
 }
 
 .form__button:hover {
